@@ -3,21 +3,64 @@
     margin: 0;
 }
 
-#halamanutama {
-    background-color: antiquewhite;
+@font-face {
+    font-family: bella;
+    src: url(font/bellaboo.otf);
+  }
+
+.navbar {
+    position: fixed;
     width: 100%;
-    height: 500px;
+    z-index: 999;
+    background-color: #121212;
+}
+
+.btn {
+    background-color: #121212;
+    color: #f0eff4;
+}
+#halamanutama {
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 800px;
+}
+
+#halamanutama .container  {
+padding-top: 80px;
+}
+
+#halamanutama #kanji img {
+    width: 400px
+ }
+
+#halamanutama .container #mode img {
+    width: 300px
+}
+
+#halamanutama .container h1 {
+    font-family: bella;
+    font-size: 100px;
+} 
+
+#halamanutama .container .row #pg1 {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: -20px;
+}
+
+#halamanutama .container .row #desktop{
+    padding-left: 300px;
 }
 
 #menuplaylist {
     width: 100%;
+    background-color: #d6d5dd;
+    padding-top: 30px;
 }
 
 #menuplaylist .container {   
     align-items: center;
     width: 100%;
-    background-color: #f0eff4;
-    margin-top: 30px;
+    background-color: #f9f9f9;
     border-radius: 50px;
     position: relative;
     z-index: 4;
@@ -33,6 +76,7 @@
     height: 10px;
     background-color: black;
     left: calc(50% - 60px);  
+
 }
 
 #menuplaylist .container .row .card {
@@ -41,11 +85,22 @@
   
 }
 
+#playlist .myplaylist .container h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+   
+}
+
 .row {
     margin-top: 10px;
    
 }
 
+h3, h2{
+font-family: 'Montserrat', sans-serif;
+font-size: 40px;
+
+}
 .row h3{
     margin-top: 30px;  
 }
@@ -60,25 +115,29 @@
 }
 
 #playlist .myplaylist {
-    background-color: aquamarine;
+    background-color: #333333;
+    color: #f9f9f9;
     width: 100%;
     margin-top: -70px;  
+    padding-top: 80px;
     border-radius: 40px;
 }
+
 
 #playlist .myplaylist h3::before{   
     content: '';
     display: block;
     position: absolute;
-    bottom: -100px;
+    bottom: 600px;
     width: 120px;
     height: 10px;
     background-color: black;
     left: calc(50% - 60px);  
+
 }
 
 #playlist .youtube {
-    background-color: bisque;
+    background-color: #f5f5f5;
     width: 100%;
   
 }
@@ -104,9 +163,11 @@
 }
 
 #playlist .spotify {
-    background-color: rgb(196, 255, 197);
+    background-color: #333333;
+    color: #f0eff4;
     width: 100%;
     padding-top:40px ;
+    padding-bottom: 100px;
     margin-top: -40px;
     position: relative;
     z-index: 1;
@@ -119,16 +180,55 @@
     padding-top: 50px;
 }
 
+#playlist .tiktok {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding-top: 70px ;
+    margin-top: -35px;
+    position: relative;
+    z-index: 1;
+    border-radius: 40px;
+    
+}
+
+footer {
+    text-align: center;
+    color: #f0eff4;
+    background-color: black;
+}
+
 @media screen and (max-width: 576px) { 
+
+    #halamanutama {
+        height: 1000px;
+    }
+
+    #menuplaylist .container {
+        width: 90%;
+    }
  
     #menuplaylist .container h3::before{   
         bottom: 210px; 
+    }
+
+    .myplaylist .container .row iframe {
+        width: 400px;
+        height: 300px;
     }
 
     .tiktok-embed {
         max-width: 205px;
         min-width: 75px;
     }
+
+    #menuplaylist .container .row .card{
+        width: 150px;
+        margin: 20px 5px 10px 5px;
+     }
+
+     #menuplaylist .container .row #youtubecard{
+        margin-top: -10px;
+     }
 
    
  }
